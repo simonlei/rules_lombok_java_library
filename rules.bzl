@@ -32,7 +32,7 @@ def lombok_java_library(name, srcs, deps = [], lombok_jar = DEFAULT_LOMBOK_JAR, 
         ])
 
     cmd.append(
-        "$(JAVABASE)/bin/jar --create --file $(OUTS) $$TMP",
+        "$(JAVABASE)/bin/jar -cf $(OUTS) $$TMP",
     )
 
     if lombok_jar not in deps:
